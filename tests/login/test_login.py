@@ -9,6 +9,7 @@ def test_user_login(user_login_fixture):
     login_page = user_login_fixture.create_page(LoginPage)
     login_page.tap_log_in()
     logging.info("Input login and password invalid test")
+    time.sleep(5)
     login_page.invalid_login_result()
     logging.info("Check forgot password test")
     login_page.tap_forgot_password()
